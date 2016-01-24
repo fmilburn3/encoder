@@ -1,7 +1,7 @@
 # encoder
 
 
-   Energia sketch for an encoder with push button that provides for coarse/fine adjustment.
+   Energia sketch for a rotary encoder with push button that provides for coarse/fine adjustment.
    
    The button is coded to increase/decrease the coarseness that results from turning the encoder. 
    For example, the encoder can be set to increase or decrease the value by 100 with a turn

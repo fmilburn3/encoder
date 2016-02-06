@@ -22,7 +22,8 @@
    Pin 5        GND             // push button
    
    Placing a 0.1 uF capacitor between the push button and ground; and 1 nF capacitors between
-   the encoder pins and ground reduced bounce.
+   the encoder pins and ground reduced bounce.  Need to experiment a bit and find a proper
+   RC combination.
    
    Notes:  Connect encoder pins 1, 3, and 4 to microcontroller pins that accept external 
            interrupts Ports 1 and 2 generally have interrupt capability on the MSP430 series).
@@ -109,7 +110,7 @@ void ISR_Encoder2(){
   if (digitalRead(encoderPin2) == HIGH) {  
     encoderLH2 = true;
     if (!encoderLH1) {
-      encoderVal -= encoderInc;                       // decrease the value
+      encoderVal -= encoderInc;                       // decrease the value-
     }
   }
   // High-to-low transition?
